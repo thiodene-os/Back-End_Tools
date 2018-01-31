@@ -12,7 +12,7 @@
 // Order name appears on the payment record and is usually customer name
 // If cu_contact_id is given, then order name is built from there and order_name var 
 // will be ignored.
-function processOnlinePayment($order_num , $order_name , $payment_amount 
+function processOnlinePaymentBeanStream($order_num , $order_name , $payment_amount 
                                   , $transact_type , $cc_info , $cu_contact_id = null)
 {
   global $config_mgr ;
@@ -145,6 +145,6 @@ function processOnlinePayment($order_num , $order_name , $payment_amount
   error_log("\n<pay_log>" . $msg_to_log . "</pay_log>", 3, $log_file_name);  // log the error to the log file
   
   return $result ;
-} // processOnlinePayment
+} // processOnlinePaymentBeanStream
 
 ?>
