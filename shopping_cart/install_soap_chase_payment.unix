@@ -1,0 +1,5 @@
+# In Unix terminal run the following commands to install SOAP Client for Chase Paymentech function:
+
+sudo apt-get install php7.0-soap
+
+sudo service apache2 restart
