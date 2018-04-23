@@ -4,8 +4,8 @@ namespace SampleCode;
 class Constants
 {
 	//merchant credentials
-	const MERCHANT_LOGIN_ID = "5KP3u95bQpv";
-	const MERCHANT_TRANSACTION_KEY = "346HZ32z3fP4hTG2";
+	const MERCHANT_LOGIN_ID = "5KP3u95bQpv"; // Editable
+	const MERCHANT_TRANSACTION_KEY = "346HZ32z3fP4hTG2"; // Editable
 	
 	const RESPONSE_OK = "Ok";
 	
