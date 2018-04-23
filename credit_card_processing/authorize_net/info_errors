@@ -1,0 +1,15 @@
+# Errors:
+
+# 	E00007 User authentication failed due to invalid authentication values (See picture)
+# Go to ACCOUNT / API Credentials & Keys / Create new key(s)
+# -> regenerate transaction key
+
+
+# Transaction Failed Error Code : 30 Error Message : The configuration with processor is invalid. Call Merchant Service Provider.
+# To view your Processor Configuration data stored on file.
+# - Click Account.
+# - To the left, click Merchant Profile.
+# - Look under Payment Methods, across from Payment Gateway.
+# - Click View Configuration.
+# - You will see the data here. 
+# -> Authorize.net has to be linked to Chase Paymentech Account (See picture)
