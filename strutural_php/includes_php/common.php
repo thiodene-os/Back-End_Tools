@@ -37,6 +37,6 @@ define ("INCLUDES_PATH_EXTERNAL","/var/www/html/sims2/includes/external") ;
 
 // All the necessary includes for the global page to display
 include 'constants.php' ;
-include 'lib_main.php' ;
+include 'libs/lib_main.php' ;
 
 ?>
