@@ -18,7 +18,7 @@ try {
     $mail->Host = 'mail.scentroid.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
     $mail->Username = 'alarm@scentroid.com';                 // SMTP username
-    $mail->Password = 'salam2030';                           // SMTP password
+    $mail->Password = '********';                           // SMTP password
     $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 465;                                    // TCP port to connect to
 
