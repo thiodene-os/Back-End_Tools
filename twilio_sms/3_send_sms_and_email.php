@@ -10,8 +10,8 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 // SMS
 use Twilio\Rest\Client;
-$account_sid = 'AC3522ddb3584bc0fd3a918d1dab318b05';
-$auth_token = '36d2d17e06b76c3a9fa834d264991dae';
+$account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+$auth_token = 'My Twilio Token';
 
 // Connect to db
 $dbc = db_connect_sims() ;
@@ -111,7 +111,7 @@ if (@mysqli_num_rows($result) != 0)
         $mail->Host = 'mail.scentroid.com';  // Specify main and backup SMTP servers
         $mail->SMTPAuth = true;                               // Enable SMTP authentication
         $mail->Username = 'alarm@scentroid.com';                 // SMTP username
-        $mail->Password = 'salam2030';                           // SMTP password
+        $mail->Password = '********';                           // SMTP password
         $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
         $mail->Port = 465;                                    // TCP port to connect to
         //Recipients
@@ -188,7 +188,7 @@ if (@mysqli_num_rows($result) != 0)
         $mail->Host = 'mail.scentroid.com';  // Specify main and backup SMTP servers
         $mail->SMTPAuth = true;                               // Enable SMTP authentication
         $mail->Username = 'alarm@scentroid.com';                 // SMTP username
-        $mail->Password = 'salam2030';                           // SMTP password
+        $mail->Password = '********';                           // SMTP password
         $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
         $mail->Port = 465;                                    // TCP port to connect to
         //Recipients
