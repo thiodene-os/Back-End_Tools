@@ -10,8 +10,8 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 // SMS
 use Twilio\Rest\Client;
-$account_sid = '*********************************';
-$auth_token = '*********************************';
+$account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+$auth_token = 'My Twilio Token';
 
 // Connect to db
 $dbc = db_connect_sims() ;
