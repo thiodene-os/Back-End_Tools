@@ -7,7 +7,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/includes/php/session_entries.php');
 require ($_SERVER['DOCUMENT_ROOT'] . '/includes/external/mailgun/vendor/autoload.php');
 use Mailgun\Mailgun;
 # Instantiate the client.
-$mgClient = new Mailgun('key-27782bf0245341e37866d723abd34201');
+$mgClient = new Mailgun('key-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 $domain = 'mg.ioneec.com';
 
 $homemenu_block = "<table width=\"940\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" class=\"lateent\">
