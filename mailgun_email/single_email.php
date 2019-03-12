@@ -6,7 +6,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/includes/php/session_profiles.php');
 require ($_SERVER['DOCUMENT_ROOT'] . '/includes/external/mailgun/vendor/autoload.php');
 use Mailgun\Mailgun;
 # Instantiate the client.
-$mgClient = new Mailgun('key-27782bf0245341e37866d723abd34201');
+$mgClient = new Mailgun('key-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 $domain = 'mg.ioneec.com';
 
 $page_title = 'IONEEC - Create An Account';
@@ -20,8 +20,8 @@ $result99 = mysql_query($query99) or trigger_error("Query: $query99\n<br>MySQL E
 // Include the configuration file for error management and such
 require_once ($_SERVER['DOCUMENT_ROOT'] . '/includes/php/config.inc.php');
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/external/recaptcha/recaptchalib.php');
-$publickey = "6Leng8cSAAAAADoghDZ1u6dBDgXltSfYJbQSxMpK"; // you got this from the signup page
-$privatekey = "6Leng8cSAAAAAFbZygvQJ7m8QHoJmsFGAwCm8TpF";
+$publickey = "6LXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"; // you got this from the signup page
+$privatekey = "6LXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 $display_block = " ";
 
