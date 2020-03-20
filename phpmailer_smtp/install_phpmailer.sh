@@ -19,7 +19,10 @@ php -r "unlink('composer-setup.php');"
 
 # Now use composer (just a few example of how to use it...):
 
+# Test composer.phar
 php composer.phar
+# Now install library creating /vendor folder at the same time
 php composer.phar require phpmailer/phpmailer
+# Other commands
 php composer.phar install
 php composer.phar update --no-scripts
