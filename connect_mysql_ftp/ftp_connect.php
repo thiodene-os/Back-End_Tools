@@ -4,9 +4,9 @@
 // This file also establishes a connection to FTP with the user information.
 
 // Set the FTP access information as constants.
-DEFINE ('FTP_USER', 'andhim');
-DEFINE ('FTP_PASSWORD', 'EQ$ua.123@');
-DEFINE ('FTP_SERVER', '64.150.189.222');
+DEFINE ('FTP_USER', '******');
+DEFINE ('FTP_PASSWORD', '********');
+DEFINE ('FTP_SERVER', '**********');
 
 // set up a connection or die
 if ($ftpc = ftp_connect(FTP_SERVER)) {
