@@ -23,11 +23,8 @@ try {
     $mail->Port = 587;                                    // TCP port to connect to
 
     //Recipients
-    //$mail->setFrom('alarm@scentroid.com', 'SIMS Alarm');
     $mail->setFrom('info@forevent.com', 'Forevent Information');
     $mail->addAddress('ayissi.serge@gmail.com', 'Serge Ayissi');     // Add a recipient
-    //$mail->addAddress('serge.a@scentroid.com', 'Serge Ayissi');     // Add a recipient
-    //$mail->addAddress('ardevan.b@scentroid.com', 'Ardevan Bakhtari');     // Add a recipient
     //$mail->addAddress('ellen@example.com');               // Name is optional
     $mail->addReplyTo('info@forevent.com', 'Forevent Information');
     //$mail->addCC('cc@example.com');
@@ -39,7 +36,7 @@ try {
 
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'Sensor NO2-LC in SL101803';
+    $mail->Subject = 'Subject....';
     $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
