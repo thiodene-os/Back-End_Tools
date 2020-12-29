@@ -15,19 +15,19 @@ try {
     //Server settings
     $mail->SMTPDebug = 2;                                 // Enable verbose debug output
     $mail->isSMTP();                                      // Set mailer to use SMTP
-    $mail->Host = 'mail.scentroid.com';  // Specify main and backup SMTP servers
+    $mail->Host = 'mail.******.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    $mail->Username = 'alarm@scentroid.com';                 // SMTP username
+    $mail->Username = 'alarm@********.com';                 // SMTP username
     $mail->Password = '********';                           // SMTP password
     $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 465;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('alarm@scentroid.com', 'SIMS Alarm');
+    $mail->setFrom('alarm@*******.com', 'Alarm');
     //$mail->addAddress('ayissi.serge@gmail.com', 'Serge Ayissi');     // Add a recipient
-    $mail->addAddress('serge.a@scentroid.com', 'Serge Ayissi');     // Add a recipient
+    $mail->addAddress('serge.a@********.com', 'Serge Ayissi');     // Add a recipient
     //$mail->addAddress('ellen@example.com');               // Name is optional
-    $mail->addReplyTo('info@scentroid.com', 'Information');
+    $mail->addReplyTo('info@********.com', 'Information');
     //$mail->addCC('cc@example.com');
     //$mail->addBCC('bcc@example.com');
 
