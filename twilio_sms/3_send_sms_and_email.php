@@ -1,6 +1,6 @@
 <?php
 
-# Test get the last connected IP information from SIMS1 Logs
+# Test get the last connected IP information
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/php/common.php');
 
 // Autoload definition for Email and SMS
@@ -12,10 +12,6 @@ use PHPMailer\PHPMailer\Exception;
 use Twilio\Rest\Client;
 $account_sid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 $auth_token = 'My Twilio Token';
-
-// Connect to db
-$dbc = db_connect_sims() ;
-$dbc_local = db_connect_local() ;
 
 // test Notification
 $user_id = 174 ;
@@ -108,26 +104,26 @@ if (@mysqli_num_rows($result) != 0)
         //Server settings
         //$mail->SMTPDebug = 2;                                 // Enable verbose debug output
         $mail->isSMTP();                                      // Set mailer to use SMTP
-        $mail->Host = 'mail.scentroid.com';  // Specify main and backup SMTP servers
+        $mail->Host = 'mail.*******.com';  // Specify main and backup SMTP servers
         $mail->SMTPAuth = true;                               // Enable SMTP authentication
-        $mail->Username = 'alarm@scentroid.com';                 // SMTP username
+        $mail->Username = 'alarm@********.com';                 // SMTP username
         $mail->Password = '********';                           // SMTP password
         $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
         $mail->Port = 465;                                    // TCP port to connect to
         //Recipients
-        $mail->setFrom('info@scentroid.com', 'SIMS2.0 Notification');
+        $mail->setFrom('info@scentroid.com', 'Notification');
         $mail->addAddress($e,$full_name);     // Add a recipient
-        $mail->addReplyTo('info@scentroid.com', 'SIMS2.0 Notification');
+        $mail->addReplyTo('info@********.com', 'Notification');
         //Content
         $mail->isHTML(true);                                  // Set email format to HTML
-        $mail->Subject = 'SIMS2.0 Notification' ;
+        $mail->Subject = 'Notification' ;
         $mail->Body    = $high_notif_msg ;
         $mail->AltBody = $high_notif_msg ;
         $mail->send() ;
         
         // Send SMS
         // A Twilio number you own with SMS capabilities
-        $twilio_number = "+16477244859";
+        $twilio_number = "**********";
         $client = new Client($account_sid, $auth_token) ;
         $client->messages->create(
           // Where to send a text message (your cell phone?)
@@ -185,26 +181,26 @@ if (@mysqli_num_rows($result) != 0)
         //Server settings
         //$mail->SMTPDebug = 2;                                 // Enable verbose debug output
         $mail->isSMTP();                                      // Set mailer to use SMTP
-        $mail->Host = 'mail.scentroid.com';  // Specify main and backup SMTP servers
+        $mail->Host = 'mail.********.com';  // Specify main and backup SMTP servers
         $mail->SMTPAuth = true;                               // Enable SMTP authentication
-        $mail->Username = 'alarm@scentroid.com';                 // SMTP username
+        $mail->Username = 'alarm@********.com';                 // SMTP username
         $mail->Password = '********';                           // SMTP password
         $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
         $mail->Port = 465;                                    // TCP port to connect to
         //Recipients
-        $mail->setFrom('info@scentroid.com', 'SIMS2.0 Notification');
+        $mail->setFrom('info@*******.com', 'Notification');
         $mail->addAddress($e,$full_name);     // Add a recipient
-        $mail->addReplyTo('info@scentroid.com', 'SIMS2.0 Notification');
+        $mail->addReplyTo('info@********.com', 'Notification');
         //Content
         $mail->isHTML(true);                                  // Set email format to HTML
-        $mail->Subject = 'SIMS2.0 Notification' ;
+        $mail->Subject = 'Notification' ;
         $mail->Body    = $low_notif_msg ;
         $mail->AltBody = $low_notif_msg ;
         $mail->send() ;
         
         // Send SMS
         // A Twilio number you own with SMS capabilities
-        $twilio_number = "+16477244859";
+        $twilio_number = "***********";
         $client = new Client($account_sid, $auth_token);
         $client->messages->create(
           // Where to send a text message (your cell phone?)
@@ -228,9 +224,5 @@ if (@mysqli_num_rows($result) != 0)
 }
 
 echo "OK" ;
-
-// Close db
-db_close($dbc) ;
-db_close($dbc_local) ;
 
 ?>
