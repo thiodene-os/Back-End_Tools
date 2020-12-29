@@ -2,10 +2,6 @@
 
 require_once('/var/www/html/includes/php/crontab/common_cron.php') ;
 
-// Connect to db
-$dbc = db_connect_sims() ;
-$dbc_local = db_connect_local() ;
-
 // Construct an array of all the date ranges from Table
 $date_range = array() ;
 $query3 = "SELECT date_range.id AS daterange_id, daterange FROM date_range" ;
@@ -66,10 +62,6 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
   }
   
 }
-
-// Close db
-db_close($dbc) ;
-db_close($dbc_local) ;
 
 echo "Register OK; \n" ;
 
