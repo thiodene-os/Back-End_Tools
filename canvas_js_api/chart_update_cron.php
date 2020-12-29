@@ -2,10 +2,6 @@
 
 require_once('/var/www/html/includes/php/crontab/common_cron.php') ;
 
-// Connect to db
-$dbc = db_connect_sims() ;
-$dbc_local = db_connect_local() ;
-
 // Last 3 Months / get the ID
 $date_range = '3 months' ;
 $query = "SELECT date_range.id AS daterange_id FROM date_range WHERE daterange = '" . $date_range . "'" ;
@@ -45,10 +41,6 @@ $query3 = "UPDATE canvas_js_equipment
           . " WHERE id = " . $update_vanvasjs_id ;
 $result3 = mysqli_query($dbc_local, $query3) or trigger_error("Query: $query3\n<br>MySQL Error: " . mysqli_error($dbc_local)) ;
 //$row3 = mysqli_fetch_array($result3, MYSQLI_NUM) ;
-
-// Close db
-db_close($dbc) ;
-db_close($dbc_local) ;
 
 echo "3 Months:OK; \n" ;
 
