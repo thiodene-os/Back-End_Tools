@@ -5,8 +5,8 @@
 // This file also defines the escape_data() function.
 
 // Set the database access information as constants.
-DEFINE ('DB_USER', 'thiodene');
-DEFINE ('DB_PASSWORD', 'eq1ua9di7ff7');
+DEFINE ('DB_USER', '******');
+DEFINE ('DB_PASSWORD', '*******');
 DEFINE ('DB_HOST', 'localhost:3306');
 //DEFINE ('DB_HOST', '127.0.0.1');
 DEFINE ('DB_NAME', 'admin_forevent');
