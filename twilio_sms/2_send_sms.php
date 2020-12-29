@@ -11,7 +11,7 @@ $auth_token = 'My Twilio Token';
 // $auth_token = $_ENV["TWILIO_ACCOUNT_SID"]
 
 // A Twilio number you own with SMS capabilities
-$twilio_number = "+16477244859";
+$twilio_number = "***********";
 
 $client = new Client($account_sid, $auth_token);
 $client->messages->create(
