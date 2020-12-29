@@ -20,9 +20,6 @@ function buildMainMap()
 function buildGeoPosition($equipment)
 {
 
-  // Connect to db
-  $dbc = db_connect_sims() ;
-
   // Get the last position of the scentinel
   $query = "SELECT sample.id AS sample_id, sample.lat, sample.lon
         FROM sample
@@ -35,9 +32,6 @@ function buildGeoPosition($equipment)
   
   $final_geoposition = '{lat: ' . $lat . ', lng: ' .  $lon . '};' ;
   
-  // Close db
-  db_close($dbc) ;
-  
   return $final_geoposition ;
 } //buildGeoPosition
 
@@ -45,9 +39,6 @@ function buildGeoPosition($equipment)
 // Builds and returns polygons for Wind speed and direction
 function buildWindPolygon($equipment)
 {
-
-  // Connect to db
-  $dbc = db_connect_sims() ;
   
   $wind_speed = 'wind speed' ;
   $wind_direction = 'wind direction' ;
@@ -163,9 +154,6 @@ function buildWindPolygon($equipment)
     $final_polygon = '' ;
     $color_code = '#FFFFFF' ;
   }
-  
-  // Close db
-  db_close($dbc) ;
   
   return array($final_polygon, $color_code) ;
 } //buildWindPolygon
